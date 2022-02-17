@@ -9,7 +9,7 @@ class AppWidget extends StatelessWidget {
       // navigatorKey: alice.getNavigatorKey(),
       initialRoute: Modular.initialRoute,
       title: 'Flutter Slidy',
-      theme: ThemeData(primaryColor: Colors.blue, platform: TargetPlatform.iOS),
+      theme: ThemeData(primaryColor: Colors.blue, platform: TargetPlatform.iOS),//android手势关闭页面，需要配置platform: TargetPlatform.iOS开启优化关闭页面
     ).modular();
   }
 }

@@ -9,6 +9,7 @@ class AppModule extends Module {
   @override
   final List<Bind> binds = [];
 
+  ///ChildRoute的transition属性不能指定其他值，否则ios上右滑关闭页面失效
   @override
   final List<ModularRoute> routes = [
     ChildRoute(Modular.initialRoute, child: (_, __) => HomePage()),
