@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../app/app_widget.dart';
+
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -17,11 +19,22 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("主页"),
       ),
-      body: TextButton(
-          onPressed: () {
-            Modular.to.pushNamed("/second", arguments: "1000");
-          },
-          child: Text("点击")),
+      body: Container(
+        alignment: Alignment.center,
+        child: Column(
+          children: [
+            Text(
+              "主页",
+              style: Theme.of(appKey.currentContext!).textTheme.caption,
+            ),
+            TextButton(
+                onPressed: () {
+                  Modular.to.pushNamed("/second", arguments: "1000");
+                },
+                child: Text("点击"))
+          ],
+        ),
+      ),
     );
   }
 }

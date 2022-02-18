@@ -21,11 +21,14 @@ class _FourthPageState extends State<FourthPage> {
         appBar: AppBar(
           title: Text("第四页"),
         ),
-        body: Column(
-          children: [
-            Text("上一页参数:${widget.param}"),
-            TextButton(onPressed: () {}, child: Text("下一页"))
-          ],
+        body: Container(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              Text("上一页参数:${widget.param}"),
+              TextButton(onPressed: () {}, child: Text("下一页"))
+            ],
+          ),
         ));
   }
 }

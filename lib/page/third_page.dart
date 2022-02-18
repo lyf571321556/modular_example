@@ -19,17 +19,19 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("第三页"),
+          title: const Text("第三页"),
         ),
-        body: Column(
-          children: [
-            Text("上一页参数:${widget.param}"),
-            TextButton(
-                onPressed: () {
-                  Modular.to.pushNamed("/fourth?param=3000");
-                },
-                child: Text("下一页"))
-          ],
-        ));
+        body: Container(
+            alignment: Alignment.center,
+            child: Column(
+              children: [
+                Text("上一页参数:${widget.param}"),
+                TextButton(
+                    onPressed: () {
+                      Modular.to.pushNamed("/fourth?param=3000");
+                    },
+                    child: const Text("下一页"))
+              ],
+            )));
   }
 }

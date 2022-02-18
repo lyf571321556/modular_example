@@ -21,15 +21,18 @@ class _SecondPageState extends State<SecondPage> {
         appBar: AppBar(
           title: Text("第二页"),
         ),
-        body: Column(
-          children: [
-            Text("上一页参数:${widget.param}"),
-            TextButton(
-                onPressed: () {
-                  Modular.to.pushNamed("/third/2000", arguments: "下一页");
-                },
-                child: Text("下一页"))
-          ],
+        body: Container(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              Text("上一页参数:${widget.param}"),
+              TextButton(
+                  onPressed: () {
+                    Modular.to.pushNamed("/third/2000", arguments: "下一页");
+                  },
+                  child: Text("下一页"))
+            ],
+          ),
         ));
   }
 }

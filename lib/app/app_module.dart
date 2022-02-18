@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../page/forth_page.dart';
+import '../page/fourth_page.dart';
 import '../page/home_page.dart';
 import '../page/second_page.dart';
 import '../page/third_page.dart';
