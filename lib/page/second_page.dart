@@ -17,6 +17,8 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    debugPrint(Theme.of(context).textTheme.bodyText1.toString());
     return Scaffold(
         appBar: AppBar(
           title: Text("第二页"),
@@ -25,7 +27,14 @@ class _SecondPageState extends State<SecondPage> {
           alignment: Alignment.center,
           child: Column(
             children: [
-              Text("上一页参数:${widget.param}"),
+              Text(
+                "屏幕大小参数参数:${size.toString()}",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+              Text(
+                "上一页参数:${widget.param}",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
               TextButton(
                   onPressed: () {
                     Modular.to.pushNamed("/third/2000", arguments: "下一页");

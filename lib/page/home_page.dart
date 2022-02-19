@@ -15,6 +15,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    debugPrint(Theme.of(context).textTheme.subtitle2.toString());
     return Scaffold(
       appBar: AppBar(
         title: Text("主页"),
@@ -24,8 +26,12 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Text(
+              "屏幕大小参数参数:${size.toString()}",
+              style: Theme.of(context).textTheme.subtitle2,
+            ),
+            Text(
               "主页",
-              style: Theme.of(appKey.currentContext!).textTheme.caption,
+              style: Theme.of(context).textTheme.subtitle2,
             ),
             TextButton(
                 onPressed: () {

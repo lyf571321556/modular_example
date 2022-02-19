@@ -17,6 +17,8 @@ class FourthPage extends StatefulWidget {
 class _FourthPageState extends State<FourthPage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    debugPrint(Theme.of(context).textTheme.caption.toString());
     return Scaffold(
         appBar: AppBar(
           title: Text("第四页"),
@@ -25,7 +27,14 @@ class _FourthPageState extends State<FourthPage> {
           alignment: Alignment.center,
           child: Column(
             children: [
-              Text("上一页参数:${widget.param}"),
+              Text(
+                "屏幕大小参数参数:${size.toString()}",
+                style: Theme.of(context).textTheme.caption,
+              ),
+              Text(
+                "上一页参数:${widget.param}",
+                style: Theme.of(context).textTheme.caption,
+              ),
               TextButton(onPressed: () {}, child: Text("下一页"))
             ],
           ),
