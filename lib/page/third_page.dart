@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../app/app_widget.dart';
+
 class ThirdPage extends StatefulWidget {
   final String param;
 
@@ -17,8 +19,8 @@ class ThirdPage extends StatefulWidget {
 class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    debugPrint(Theme.of(context).textTheme.bodyText2.toString());
+    final size = MediaQuery.of(navigatorKey.currentContext!).size;
+    debugPrint(Theme.of(navigatorKey.currentContext!).textTheme.bodyText2.toString());
     return Scaffold(
         appBar: AppBar(
           title: const Text("第三页"),

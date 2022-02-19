@@ -15,8 +15,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    debugPrint(Theme.of(context).textTheme.subtitle2.toString());
+    // final size = MediaQuery.of(context).size;
+    // debugPrint(Theme.of(context).textTheme.subtitle2.toString());
+    final size = MediaQuery.of(navigatorKey.currentContext!).size;
+    debugPrint(Theme.of(navigatorKey.currentContext!).textTheme.subtitle2.toString());
     return Scaffold(
       appBar: AppBar(
         title: Text("主页"),
